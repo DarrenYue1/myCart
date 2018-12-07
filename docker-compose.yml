@@ -34,7 +34,7 @@ services:
     environment:
     - reschedule=on-node-failure
     ports:
-      - "27017:27017"
+      - "27018:27017"
     command: mongod --auth
   zipkin:
     image: openzipkin/zipkin 
