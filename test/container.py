@@ -44,7 +44,7 @@ class CartContainerTest(unittest.TestCase):
         out = Dredd().test_against_endpoint(
             "carts", "http://carts/",
             links=[self.mongo_container_name, self.container_name],
-            env=[("MONGO_ENDPOINT", "mongodb://carts-db:27018/data")],
+            env=[("MONGO_ENDPOINT", "mongodb://carts-db:27017/data")],
             dump_streams=True)
         self.assertGreater(out.find("0 failing"), -1)
         self.assertGreater(out.find("0 errors"), -1)
